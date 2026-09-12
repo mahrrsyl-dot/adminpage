@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل الحضور | SPE جامعة طيبة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Attendance.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- الشريط الجانبي -->
+      <aside class="sidebar">
+        <div class="sidebar__top">
+          <a class="brand" href="../../dashboard.html">
+            <span class="brand__mark">
+              <svg viewBox="0 0 42 42"><path d="M22.4 2.5a18.2 18.2 0 1 0 17.1 23.7h-8.6a10.3 10.3 0 1 1-4.8-12.2l4.3-7.5a18 18 0 0 0-8-3.9Z"/><circle cx="33" cy="12" r="6.5"/></svg>
+            </span>
+            <span class="brand__name">SPE</span>
+          </a>
+          <p class="sidebar__label">إدارة منصة النادي</p>
+        </div>
+        
+        <nav class="sidebar__nav">
+          <a class="nav-link" href="../../dashboard.html">
+            <svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm0 7h6v-4H4v4Zm10 0h6v-9h-6v9Zm0-16v4h6V4h-6Z"/></svg>
+            <span>لوحة التحكم</span>
+          </a>
+          <a class="nav-link" href="../../Events.html">
+            <svg viewBox="0 0 24 24"><path d="M7 2v3m10-3v3M4 9h16M5 4h14a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm3 9h3m2 0h3m-8 4h3"/></svg>
+            <span>الفعاليات</span>
+          </a>
+          <a class="nav-link is-active" href="../Registration.html">
+            <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3M5 11h14M6 5h12a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm2 10 2 2 5-5"/></svg>
+            <span>التسجيل والحضور</span>
+          </a>
+          <a class="nav-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-4A4.5 4.5 0 0 0 3 18.5V20m8.5-12A3.5 3.5 0 1 0 8 4.5 3.5 3.5 0 0 0 11.5 8Zm3.5 6a4 4 0 0 1 6 3.5V20m-3-12a3 3 0 1 0-2.2-5.2"/></svg>
+            <span>الأعضاء</span>
+          </a>
+          <a class="nav-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14H6.5A2.5 2.5 0 0 0 4 19.5m0-14v14m0 0A2.5 2.5 0 0 1 6.5 17H20v4H6.5A2.5 2.5 0 0 1 4 18.5"/></svg>
+            <span>الأخبار والمحتوى</span>
+          </a>
+          <a class="nav-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5Zm3 11 3-3 2.5 2.5 2-2L18 17M8.5 9A1.5 1.5 0 1 0 8.5 6a1.5 1.5 0 0 0 0 3Z"/></svg>
+            <span>المعرض</span>
+          </a>
+          <a class="nav-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+            <span>فريق النادي</span>
+          </a>
+          <a class="nav-link" href="../../Certificates.html">
+            <svg viewBox="0 0 24 24"><path d="M6 3h12v12H6V3Zm3 16 3 2 3-2v-4H9v4Zm1-12h4m-4 4h4"/></svg>
+            <span>الشهادات</span>
+          </a>
+          <a class="nav-link" href="#">
+            <svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Zm-8 12h4"/></svg>
+            <span>الإشعارات</span>
+          </a>
+        </nav>
+        
+        <footer class="sidebar__footer">
+          <div class="user-profile">
+            <strong class="user-profile__name">جمانة الجهني</strong>
+            <span class="user-profile__role">Webmaster <bdi>•</bdi> مدير النظام</span>
+          </div>
+        </footer>
+      </aside>
+
+      <!-- المحتوى الرئيسي -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>الحضور</h1>
+          <p>عرض المسجلين الذين دخلوا والذين لم يحضروا حتى الآن</p>
+        </header>
+
+      <!-- الإحصائيات -->
+        <div class="stats-grid">
+          <div class="stat-card stat-card--waitlist">
+            <span class="stat-title">قائمة الانتظار</span>
+            <strong class="stat-value">10</strong>
+            <span class="stat-sub text-yellow">8%</span>
+          </div>
+          <div class="stat-card stat-card--absent">
+            <span class="stat-title">لم يحضر</span>
+            <strong class="stat-value">25</strong>
+            <span class="stat-sub text-red">21%</span>
+          </div>
+          <div class="stat-card stat-card--attended">
+            <span class="stat-title">تم الحضور</span>
+            <strong class="stat-value">95</strong>
+            <span class="stat-sub text-green">79%</span>
+          </div>
+          <div class="stat-card stat-card--total">
+            <span class="stat-title">إجمالي المسجلين</span>
+            <strong class="stat-value">120</strong>
+            <span class="stat-sub text-blue">مستقبل الأمن السيبراني</span>
+          </div>
+        </div>
+
+        <!-- اللوحة وقائمة الحضور -->
+        <section class="panel list-panel">
+          <div class="panel-header-flex">
+            <div class="title-area">
+              <h2>قائمة الحضور لفعالية (مستقبل الأمن السيبراني)</h2>
+              <p>تتحدث الحالة تلقائياً بعد تأكيد المنظم لدخول المشارك</p>
+            </div>
+            <!-- أزرار الفلترة -->
+            <div class="filter-group">
+              <button class="filter-btn">لم يحضروا</button>
+              <button class="filter-btn">الحاضرون</button>
+              <button class="filter-btn active">الكل</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>الوقت</th>
+                  <th>الاسم</th>
+                  <th>رقم التسجيل</th>
+                  <th>الحالة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-muted">10:02 ص</td>
+                  <td class="fw-bold">سارة محمد العتيبي</td>
+                  <td class="text-muted">SPE-24529</td>
+                  <td><span class="badge badge--green">حضر</span></td>
+                </tr>
+                <tr>
+                  <td class="text-muted">10:00 ص</td>
+                  <td class="fw-bold">عبدالله خالد</td>
+                  <td class="text-muted">SPE-24528</td>
+                  <td><span class="badge badge--green">حضر</span></td>
+                </tr>
+                <tr>
+                  <td class="text-muted">9:58 ص</td>
+                  <td class="fw-bold">ريم أحمد</td>
+                  <td class="text-muted">SPE-24527</td>
+                  <td><span class="badge badge--orange">انتظار</span></td>
+                </tr>
+                <tr>
+                  <td class="text-muted">9:57 ص</td>
+                  <td class="fw-bold">خالد سالم</td>
+                  <td class="text-muted">SPE-24526</td>
+                  <td><span class="badge badge--red">لم يحضر</span></td>
+                </tr>
+                <tr>
+                  <td class="text-muted">9:55 ص</td>
+                  <td class="fw-bold">نورة سعيد</td>
+                  <td class="text-muted">SPE-24525</td>
+                  <td><span class="badge badge--green">حضر</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel-footer-actions">
+            <button class="button-outline">تصدير القائمة</button>
+            <button class="button-primary">عرض الحاضرين فقط</button>
+          </div>
+        </section>
+        
+        <p class="footer-hint">الحاضر = تم تأكيد دخوله من شاشة المنظمين | لم يحضر = مسجل في الفعالية ولم يتم تأكيد دخوله بعد</p>
+      </main>
+    </div>
+  </body>
+</html>
