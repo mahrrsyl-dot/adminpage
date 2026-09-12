@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="لوحة تحكم منصة SPE بجامعة طيبة"
+    />
+    <title>لوحة التحكم | SPE جامعة طيبة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- الشريط الجانبي -->
+      <aside class="sidebar" aria-label="القائمة الرئيسية">
+        <div class="sidebar__top">
+          <a class="brand" href="#dashboard" aria-label="SPE جامعة طيبة">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 42 42" role="img">
+                <path d="M22.4 2.5a18.2 18.2 0 1 0 17.1 23.7h-8.6a10.3 10.3 0 1 1-4.8-12.2l4.3-7.5a18 18 0 0 0-8-3.9Z" />
+                <circle cx="33" cy="12" r="6.5" />
+              </svg>
+            </span>
+            <span class="brand__name">SPE</span>
+          </a>
+          <p class="sidebar__label">إدارة منصة النادي</p>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+          <a class="nav-link is-active" href="#dashboard" aria-current="page">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm0 7h6v-4H4v4Zm10 0h6v-9h-6v9Zm0-16v4h6V4h-6Z" /></svg>
+            <span>لوحة التحكم</span>
+          </a>
+          <a class="nav-link" href="#events">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2v3m10-3v3M4 9h16M5 4h14a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm3 9h3m2 0h3m-8 4h3" /></svg>
+            <span>الفعاليات</span>
+          </a>
+          <a class="nav-link" href="#registration">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3M5 11h14M6 5h12a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm2 10 2 2 5-5" /></svg>
+            <span>التسجيل والحضور</span>
+          </a>
+          <a class="nav-link" href="#members">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-4A4.5 4.5 0 0 0 3 18.5V20m8.5-12A3.5 3.5 0 1 0 8 4.5 3.5 3.5 0 0 0 11.5 8Zm3.5 6a4 4 0 0 1 6 3.5V20m-3-12a3 3 0 1 0-2.2-5.2" /></svg>
+            <span>الأعضاء</span>
+          </a>
+          <a class="nav-link" href="#content">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14H6.5A2.5 2.5 0 0 0 4 19.5m0-14v14m0 0A2.5 2.5 0 0 1 6.5 17H20v4H6.5A2.5 2.5 0 0 1 4 18.5" /></svg>
+            <span>الأخبار والمحتوى</span>
+          </a>
+          <a class="nav-link" href="#gallery">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5Zm3 11 3-3 2.5 2.5 2-2L18 17M8.5 9A1.5 1.5 0 1 0 8.5 6a1.5 1.5 0 0 0 0 3Z" /></svg>
+            <span>المعرض</span>
+          </a>
+          <a class="nav-link" href="#team">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" /></svg>
+            <span>فريق النادي</span>
+          </a>
+          <a class="nav-link" href="#certificates">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h12v12H6V3Zm3 16 3 2 3-2v-4H9v4Zm1-12h4m-4 4h4" /></svg>
+            <span>الشهادات</span>
+          </a>
+          <a class="nav-link" href="#notifications">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Zm-8 12h4" /></svg>
+            <span>الإشعارات</span>
+          </a>
+          <a class="nav-link" href="#permissions">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Zm-2 9 1.4 1.4L15 9.8" /></svg>
+            <span>الصلاحيات</span>
+          </a>
+          <a class="nav-link" href="#settings">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 15.2A3.2 3.2 0 1 0 12 8.8a3.2 3.2 0 0 0 0 6.4Zm8-3.2 1.4-1-1.8-3.1-1.7.7a7.7 7.7 0 0 0-1.7-1l-.2-1.8h-3.6l-.3 1.8a7.7 7.7 0 0 0-1.7 1l-1.7-.7L6.9 11l1.4 1a7.4 7.4 0 0 0 0 2l-1.4 1 1.8 3.1 1.7-.7c.5.4 1.1.7 1.7 1l.3 1.8H16l.2-1.8c.6-.3 1.2-.6 1.7-1l1.7.7 1.8-3.1-1.4-1a7.4 7.4 0 0 0 0-2Z" /></svg>
+            <span>الإعدادات</span>
+          </a>
+        </nav>
+
+        <!-- معلومات المستخدم مثبتة في أسفل الشريط -->
+        <footer class="sidebar__footer">
+          <div class="user-profile">
+            <strong class="user-profile__name">جمانة الجهني</strong>
+            <span class="user-profile__role">Webmaster <bdi>•</bdi> مدير النظام</span>
+          </div>
+          <a class="logout-link" href="#logout">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5m5 5H3m9-8V3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7v-1" /></svg>
+            <span>تسجيل الخروج</span>
+          </a>
+        </footer>
+      </aside>
+
+      <main class="main-content" id="dashboard">
+        <!-- العنوان -->
+        <header class="page-header">
+          <p class="page-header__eyebrow">إدارة منصة النادي</p>
+          <h1>لوحة التحكم</h1>
+          <p>إدارة وتشغيل منصة SPE بجامعة طيبة</p>
+        </header>
+
+        <!-- ملخص الإحصاءات -->
+        <section class="stats-grid" aria-label="ملخص الإحصاءات">
+          <article class="stat-card stat-card--certificates">
+            <p class="stat-card__label">الشهادات الصادرة</p>
+            <strong class="stat-card__value" data-count="982">982</strong>
+          </article>
+          <article class="stat-card stat-card--registrations">
+            <p class="stat-card__label">تسجيلات الفعاليات</p>
+            <strong class="stat-card__value" data-count="386">386</strong>
+          </article>
+          <article class="stat-card stat-card--events">
+            <p class="stat-card__label">الفعاليات القادمة</p>
+            <strong class="stat-card__value" data-count="6">6</strong>
+          </article>
+          <article class="stat-card stat-card--members">
+            <p class="stat-card__label">إجمالي الأعضاء</p>
+            <strong class="stat-card__value" data-count="1248">1,248</strong>
+          </article>
+        </section>
+
+        <!-- الإجراءات السريعة -->
+        <section class="quick-actions" aria-labelledby="quick-actions-title">
+          <div class="section-heading">
+            <span class="section-heading__bar" aria-hidden="true"></span>
+            <h2 id="quick-actions-title">الإجراءات السريعة</h2>
+          </div>
+          <div class="quick-actions__buttons">
+            <button class="button button--primary" type="button" data-action="create-event">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14" /></svg>
+              إنشاء فعالية
+            </button>
+            <button class="button button--primary" type="button" data-action="add-news">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14" /></svg>
+              إضافة خبر
+            </button>
+            <button class="button button--secondary" type="button" data-action="send-notification">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Zm-8 12h4" /></svg>
+              إرسال إشعار
+            </button>
+            <button class="button button--secondary" type="button" data-action="issue-certificates">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h12v12H6V3Zm3 16 3 2 3-2v-4H9v4Z" /></svg>
+              إصدار شهادات
+            </button>
+          </div>
+        </section>
+
+        <div class="content-grid">
+          <!-- الفعالية القادمة -->
+          <section class="panel upcoming-event" aria-labelledby="upcoming-event-title">
+            <div class="section-heading">
+              <span class="section-heading__bar" aria-hidden="true"></span>
+              <h2 id="upcoming-event-title">الفعالية القادمة</h2>
+            </div>
+            <div class="upcoming-event__body">
+              <span class="status-badge">التسجيل مفتوح</span>
+              <h3>مستقبل الأمن السيبراني في المملكة</h3>
+              <div class="event-details" aria-label="تفاصيل الفعالية">
+                <span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2v3m10-3v3M4 9h16M5 4h14a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></svg>
+                  29 مايو 2026
+                </span>
+                <span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg>
+                  10:00 صباحًا
+                </span>
+                <span class="event-details__location">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                  جامعة طيبة - المدينة المنورة
+                </span>
+              </div>
+              <button class="button button--primary upcoming-event__button" type="button" data-action="manage-event">
+                إدارة الفعالية
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 6l6 6-6 6M4 12h15" /></svg>
+              </button>
+            </div>
+          </section>
+
+          <!-- آخر النشاطات -->
+          <section class="panel activities" aria-labelledby="activities-title">
+            <div class="section-heading">
+              <span class="section-heading__bar" aria-hidden="true"></span>
+              <h2 id="activities-title">آخر النشاطات</h2>
+            </div>
+            <ul class="activity-list">
+              <li>
+                <span class="activity-list__dot" aria-hidden="true"></span>
+                <span class="activity-list__text">تم إنشاء فعالية جديدة</span>
+                <time>منذ قليل</time>
+              </li>
+              <li>
+                <span class="activity-list__dot" aria-hidden="true"></span>
+                <span class="activity-list__text">تم تسجيل أعضاء جدد في فعالية</span>
+                <time>منذ قليل</time>
+              </li>
+              <li>
+                <span class="activity-list__dot" aria-hidden="true"></span>
+                <span class="activity-list__text">تم نشر خبر جديد</span>
+                <time>منذ قليل</time>
+              </li>
+              <li>
+                <span class="activity-list__dot" aria-hidden="true"></span>
+                <span class="activity-list__text">تم إصدار شهادات حضور</span>
+                <time>منذ قليل</time>
+              </li>
+              <li>
+                <span class="activity-list__dot" aria-hidden="true"></span>
+                <span class="activity-list__text">تم تحديث بيانات أحد الأعضاء</span>
+                <time>منذ قليل</time>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
