@@ -39,6 +39,47 @@ button {
   cursor: pointer;
 }
 
+
+:root {
+  --navy: #041b36;
+  --blue: #205fae;
+  --page-bg: #f4f6fa;
+  --surface: #ffffff;
+  --border: #d7dce4;
+  --text: #081b37;
+  --muted: #9aa4b2;
+}
+
+.sidebar {
+  width: 238px;
+  padding: 26px 18px 20px;
+  overflow-y: auto;
+  background: var(--navy);
+}
+
+.sidebar__top { padding: 8px 14px 27px; }
+.brand__mark { width: 34px; height: 34px; border-color: rgba(255,255,255,.3); }
+.brand__name { font-size: 22px; letter-spacing: .05em; }
+.sidebar__label { margin: 20px 0 0; font-size: 13px; }
+.sidebar__nav { gap: 3px; }
+.nav-link { min-height: 36px; padding: 8px 13px; border: 0; border-radius: 7px; background: transparent; font-size: 14px; text-align: right; transition: background-color .18s ease, color .18s ease; }
+.nav-link.is-active { background: var(--blue); box-shadow: none; }
+.sidebar__footer { padding: 34px 13px 0; }
+.user-profile { gap: 4px; padding-bottom: 16px; }
+.user-profile__name { font-size: 15px; }
+.user-profile__role { font-size: 11px; }
+.logout-link { min-height: auto; padding: 0; border-radius: 0; font-size: 12px; }
+.logout-link:hover, .logout-link:focus-visible { background: transparent; color: #fff; }
+.main-content { width: calc(100% - 238px); margin-right: 238px; }
+
+@media (max-width: 760px) {
+  .sidebar { position: static; width: 100%; min-height: auto; padding: 16px; }
+  .sidebar__top { padding: 0 5px 15px; }
+  .sidebar__label { margin-top: 10px; }
+  .sidebar__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sidebar__footer { padding: 20px 5px 0; }
+  .main-content { width: 100%; margin-right: 0; }
+}
 svg {
   display: block;
   width: 1.35rem;

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="إضافة محتوى جديد إلى منصة SPE بجامعة طيبة" />
+    <title>إضافة محتوى | SPE جامعة طيبة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="add-content.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <aside class="sidebar" aria-label="القائمة الرئيسية">
+        <div class="sidebar__top">
+          <a class="brand" href="../dashboard/dashboard.html" aria-label="SPE جامعة طيبة">
+            <span class="brand__mark" aria-hidden="true"><span>S</span></span>
+            <span class="brand__name">SPE</span>
+          </a>
+          <p class="sidebar__label">إدارة منصة النادي</p>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+          <a class="nav-link" href="../dashboard/dashboard.html"><span>لوحة التحكم</span></a>
+          <a class="nav-link" href="../Events/Events.html"><span>الفعاليات</span></a>
+          <a class="nav-link" href="../Registration/Registration.html"><span>التسجيل والحضور</span></a>
+          <a class="nav-link" href="#members"><span>الأعضاء</span></a>
+          <a class="nav-link is-active" href="add-content.html" aria-current="page"><span>الأخبار والمحتوى</span></a>
+          <a class="nav-link" href="#gallery"><span>المعرض</span></a>
+          <a class="nav-link" href="#team"><span>فريق النادي</span></a>
+          <a class="nav-link" href="../Certificates/Certificates.html"><span>الشهادات</span></a>
+          <a class="nav-link" href="#notifications"><span>الإشعارات</span></a>
+          <button class="nav-link nav-link--button" type="button"><span>الصلاحيات</span></button>
+          <a class="nav-link" href="#settings"><span>الإعدادات</span></a>
+        </nav>
+
+        <footer class="sidebar__footer">
+          <div class="user-profile">
+            <strong class="user-profile__name">جمانة الجهني</strong>
+            <span class="user-profile__role">Webmaster <bdi>•</bdi> مدير النظام</span>
+          </div>
+          <a class="logout-link" href="#logout">تسجيل الخروج</a>
+        </footer>
+      </aside>
+
+      <main class="main-content" id="content">
+        <header class="page-header">
+          <p class="page-header__eyebrow">إدارة منصة النادي</p>
+          <h1>إضافة محتوى</h1>
+          <p>أنشئ محتوى جديدًا وشاركه مع أعضاء النادي</p>
+        </header>
+
+        <section class="content-panel" aria-labelledby="content-form-title">
+          <div class="content-panel__header">
+            <div>
+              <p class="content-panel__eyebrow">محتوى جديد</p>
+              <h2 id="content-form-title">بيانات المحتوى</h2>
+            </div>
+            <span class="content-panel__step">01 <span lang="en">/ 02</span></span>
+          </div>
+
+          <form class="content-form">
+            <div class="form-grid">
+              <div class="form-field form-field--wide">
+                <label for="content-title">عنوان المحتوى</label>
+                <input id="content-title" name="content-title" type="text" placeholder="اكتب عنوانًا واضحًا للمحتوى" />
+              </div>
+
+              <div class="form-field">
+                <label for="content-type">نوع المحتوى</label>
+                <select id="content-type" name="content-type">
+                  <option value="">اختر نوع المحتوى</option>
+                  <option value="article">مقال</option>
+                  <option value="announcement">إعلان</option>
+                  <option value="guide">دليل</option>
+                </select>
+              </div>
+
+              <div class="form-field form-field--wide">
+                <label for="content-description">الوصف المختصر</label>
+                <textarea id="content-description" name="content-description" rows="5" placeholder="اكتب وصفًا مختصرًا يظهر مع المحتوى"></textarea>
+              </div>
+
+              <div class="form-field">
+                <label for="content-status">حالة النشر</label>
+                <select id="content-status" name="content-status">
+                  <option value="draft">مسودة</option>
+                  <option value="published">منشور</option>
+                </select>
+              </div>
+
+              <div class="form-field form-field--wide">
+                <label for="content-body">تفاصيل المحتوى</label>
+                <textarea id="content-body" name="content-body" rows="9" placeholder="اكتب تفاصيل المحتوى هنا"></textarea>
+              </div>
+
+              <div class="form-field">
+                <label for="content-date">تاريخ النشر</label>
+                <input id="content-date" name="content-date" type="date" />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button button--primary" type="button">حفظ المحتوى</button>
+              <button class="button button--secondary" type="button">حفظ كمسودة</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
