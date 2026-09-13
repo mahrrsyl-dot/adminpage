@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إضافة صور للمعرض</title>
+
+    <link rel="stylesheet" href="add-gallery.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar" aria-label="القائمة الرئيسية">
+
+            <div class="sidebar__top">
+
+                <a class="brand"
+                   href="../dashboard/dashboard.html"
+                   aria-label="SPE جامعة طيبة">
+
+                    <div class="sidebar-logo-wrapper">
+                        <img
+                            src="../clubteam/spe-logo.svg"
+                            alt="SPE Taibah University Logo"
+                            class="sidebar-logo"
+                        >
+                    </div>
+
+                </a>
+
+                <div class="sidebar__label-row">
+
+                    <p class="sidebar__label">
+                        إدارة منصة النادي
+                    </p>
+
+                    <button
+                        class="language-switch"
+                        type="button"
+                        aria-label="تغيير لغة الموقع"
+                        title="تغيير اللغة"
+                    >
+                        <span class="lang-ar">ع</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-en">E</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= NAVIGATION ================= -->
+
+            <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+
+                <a
+                    class="nav-link"
+                    href="../dashboard/dashboard.html"
+                >
+                    <span>لوحة التحكم</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../Events/Events.html"
+                >
+                    <span>الفعاليات</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../Registration/Registration.html"
+                >
+                    <span>التسجيل والحضور</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>الأعضاء</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../add-content/add-content.html"
+                >
+                    <span>الأخبار والمحتوى</span>
+                </a>
+
+                <a
+                    class="nav-link is-active"
+                    href="add-gallery.html"
+                    aria-current="page"
+                >
+                    <span>المعرض</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../clubteam/clubteam.html"
+                >
+                    <span>فريق النادي</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../Certificates/Certificates.html"
+                >
+                    <span>الشهادات</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>الإشعارات</span>
+                </a>
+
+                <button
+                    class="nav-link nav-link--button"
+                    type="button"
+                >
+                    <span>الصلاحيات</span>
+                </button>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>الإعدادات</span>
+                </a>
+
+            </nav>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="sidebar__footer">
+
+                <div class="user-profile">
+
+                    <strong class="user-profile__name">
+                        جمانة الجهني
+                    </strong>
+
+                    <span class="user-profile__role">
+                        Webmaster <bdi>•</bdi> مدير النظام
+                    </span>
+
+                </div>
+
+                <a
+                    class="logout-link"
+                    href="#logout"
+                    data-logout
+                >
+                    تسجيل الخروج
+                </a>
+
+            </footer>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="page-header">
+
+                <h1>
+                    إضافة صور للمعرض
+                </h1>
+
+                <p>
+                    ارفع الصور واربطها بالفعالية أو التصنيف المناسب
+                </p>
+
+            </header>
+
+
+            <!-- ================= GALLERY CARD ================= -->
+
+            <section class="gallery-card">
+
+                <!-- ================= ALBUM INFORMATION ================= -->
+
+                <div class="form-grid">
+
+                    <!-- Album Title -->
+
+                    <div class="form-group">
+
+                        <label for="album-title">
+                            عنوان الألبوم
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="album-title"
+                            name="album-title"
+                            placeholder="مثال: الملتقى السنوي 2026"
+                        >
+
+                    </div>
+
+
+                    <!-- Category -->
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            التصنيف
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="category"
+                            name="category"
+                            placeholder="فعاليات / زيارات / مسابقات / ورش"
+                        >
+
+                    </div>
+
+
+                    <!-- Related Event -->
+
+                    <div class="form-group">
+
+                        <label for="related-event">
+                            الفعالية المرتبطة
+                        </label>
+
+                        <select
+                            id="related-event"
+                            name="related-event"
+                        >
+
+                            <option value="">
+                                اختر فعالية
+                            </option>
+
+                            <option value="annual-meeting">
+                                الملتقى السنوي 2026
+                            </option>
+
+                            <option value="workshop">
+                                ورشة العمل
+                            </option>
+
+                            <option value="competition">
+                                المسابقة الطلابية
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Album Date -->
+
+                    <div class="form-group">
+
+                        <label for="album-date">
+                            تاريخ الألبوم
+                        </label>
+
+                        <input
+                            type="date"
+                            id="album-date"
+                            name="album-date"
+                            value="2026-09-01"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= UPLOAD ================= -->
+
+                <div class="upload-section">
+
+                    <label
+                        class="upload-box"
+                        for="gallery-images"
+                    >
+
+                        <input
+                            type="file"
+                            id="gallery-images"
+                            name="gallery-images"
+                            accept="image/png,image/jpeg,image/webp"
+                            multiple
+                            hidden
+                        >
+
+                        <span class="upload-plus">
+                            +
+                        </span>
+
+                        <strong>
+                            اسحب الصور هنا أو اضغط للرفع
+                        </strong>
+
+                        <span>
+                            يمكن رفع عدة صور — PNG / JPG / WebP
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- ================= UPLOADED IMAGES ================= -->
+
+                <section class="uploaded-section">
+
+                    <h2>
+                        الصور المرفوعة
+                    </h2>
+
+                    <div
+                        class="images-grid"
+                        id="images-grid"
+                    >
+
+                        <!-- Preview cards will appear here -->
+
+                        <div class="image-placeholder">
+                            معاينة صورة 1
+
+                            <button
+                                type="button"
+                                class="delete-image"
+                            >
+                                × حذف
+                            </button>
+                        </div>
+
+                        <div class="image-placeholder">
+                            معاينة صورة 2
+
+                            <button
+                                type="button"
+                                class="delete-image"
+                            >
+                                × حذف
+                            </button>
+                        </div>
+
+                        <div class="image-placeholder">
+                            معاينة صورة 3
+
+                            <button
+                                type="button"
+                                class="delete-image"
+                            >
+                                × حذف
+                            </button>
+                        </div>
+
+                        <div class="image-placeholder">
+                            معاينة صورة 4
+
+                            <button
+                                type="button"
+                                class="delete-image"
+                            >
+                                × حذف
+                            </button>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= PUBLISH OPTION ================= -->
+
+                <div class="publish-row">
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="show-gallery"
+                            checked
+                        >
+
+                        <span>
+                            إظهار الألبوم في صفحة المعرض
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- ================= ACTIONS ================= -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="save-draft"
+                    >
+                        حفظ كمسودة
+                    </button>
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="publish-gallery"
+                    >
+                        نشر الألبوم
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="add-gallery.js"></script>
+
+</body>
+
+</html>

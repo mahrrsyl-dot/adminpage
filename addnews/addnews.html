@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="إضافة خبر جديد - منصة SPE بجامعة طيبة">
+
+    <title>إضافة خبر جديد | SPE جامعة طيبة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="addnews.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar" aria-label="القائمة الرئيسية">
+
+            <div class="sidebar__top">
+
+                <a
+                    class="brand"
+                    href="../dashboard/dashboard.html"
+                    aria-label="SPE جامعة طيبة"
+                >
+
+                    <div class="sidebar-logo-wrapper">
+
+                        <img src="../clubteam/spe-logo.svg"
+                    alt="SPE Taibah University Logo"
+                    class="sidebar-logo">
+
+                    </div>
+
+                </a>
+
+                <div class="sidebar__label-row">
+    <p class="sidebar__label">إدارة منصة النادي</p>
+
+    <button
+        class="language-switch"
+        type="button"
+        aria-label="تغيير لغة الموقع"
+        title="تغيير اللغة"
+    >
+        <span class="lang-ar">ع</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-en">E</span>
+    </button>
+</div>
+
+            </div>
+
+
+            <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+
+                <a
+                    class="nav-link"
+                    href="../dashboard/dashboard.html"
+                >
+                    <span>لوحة التحكم</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../Events/Events.html"
+                >
+                    <span>الفعاليات</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../Registration/Registration.html"
+                >
+                    <span>التسجيل والحضور</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>الأعضاء</span>
+                </a>
+
+                <a
+                    class="nav-link is-active"
+                    href="addnews.html"
+                    aria-current="page"
+                >
+                    <span>الأخبار والمحتوى</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>المعرض</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../clubteam/clubteam.html"
+                >
+                    <span>فريق النادي</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="../Certificates/Certificates.html"
+                >
+                    <span>الشهادات</span>
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>الإشعارات</span>
+                </a>
+
+                <button
+                    class="nav-link nav-link--button"
+                    type="button"
+                >
+                    <span>الصلاحيات</span>
+                </button>
+
+                <a
+                    class="nav-link"
+                    href="#"
+                >
+                    <span>الإعدادات</span>
+                </a>
+
+            </nav>
+
+
+            <footer class="sidebar__footer">
+
+                <div class="user-profile">
+
+                    <strong class="user-profile__name">
+                        جمانة الجهني
+                    </strong>
+
+                    <span class="user-profile__role">
+                        Webmaster <bdi>•</bdi> مدير النظام
+                    </span>
+
+                </div>
+
+                <a
+                    class="logout-link"
+                    href="#logout"
+                    id="logoutLink"
+                >
+                    تسجيل الخروج
+                </a>
+
+            </footer>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+            <header class="page-header">
+
+                <h1>
+                    إضافة خبر جديد
+                </h1>
+
+                <p>
+                    إنشاء خبر ثم مراجعته قبل النشر
+                </p>
+
+            </header>
+
+
+            <section class="news-card">
+
+                <!-- الصف الأول -->
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="newsTitle">
+                            عنوان الخبر <span>*</span>
+                        </label>
+
+                        <input
+                            id="newsTitle"
+                            type="text"
+                            placeholder="اكتب عنوانًا واضحًا ومختصرًا"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            التصنيف <span>*</span>
+                        </label>
+
+                        <input
+                            id="category"
+                            type="text"
+                            placeholder="النادي / مسابقات / بحث / إعلان"
+                        >
+
+                    </div>
+
+
+                    <!-- الصف الثاني -->
+
+                    <div class="form-group">
+
+                        <label for="author">
+                            الكاتب / القسم
+                        </label>
+
+                        <input
+                            id="author"
+                            type="text"
+                            placeholder="قسم الإعلام"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="publishDate">
+                            تاريخ النشر
+                        </label>
+
+                        <input
+                            id="publishDate"
+                            type="text"
+                            value="01 سبتمبر 2026"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- محتوى الخبر -->
+
+                <div class="content-section">
+
+                    <div class="form-group">
+
+                        <label for="newsContent">
+                            محتوى الخبر <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="newsContent"
+                            placeholder="ابدأ بكتابة نص الخبر هنا...
+
+يمكن إضافة عناوين فرعية وروابط ونقاط."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- الصورة الرئيسية -->
+
+                    <div class="image-upload">
+
+                        <button
+                            type="button"
+                            class="upload-box"
+                            id="imageUploadButton"
+                        >
+
+                            <div class="plus">
+                                +
+                            </div>
+
+                            <strong>
+                                الصورة الرئيسية
+                            </strong>
+
+                            <span>
+                                الصورة التي ستظهر في صفحة الأخبار
+                            </span>
+
+                        </button>
+
+                        <input
+                            type="file"
+                            id="imageInput"
+                            accept="image/*"
+                            hidden
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- إعدادات النشر -->
+
+                <div class="publish-settings">
+
+                    <h2>
+                        إعدادات النشر
+                    </h2>
+
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="showOnHome"
+                            checked
+                        >
+
+                        <span>
+                            يظهر في الصفحة الرئيسية
+                        </span>
+
+                    </label>
+
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="featuredNews"
+                        >
+
+                        <span>
+                            خبر مثبت
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- الأزرار -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="publishButton"
+                    >
+                        نشر الآن
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="reviewButton"
+                    >
+                        إرسال للمراجعة
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="previewButton"
+                    >
+                        معاينة الخبر
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="draftButton"
+                    >
+                        حفظ كمسودة
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="addnews.js"></script>
+
+</body>
+
+</html>
