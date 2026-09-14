@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="إعدادات منصة SPE بجامعة طيبة" />
+    <title>الإعدادات | SPE جامعة طيبة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="sittings.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- الشريط الجانبي -->
+      <aside class="sidebar" aria-label="القائمة الرئيسية">
+        <div class="sidebar__top">
+          <a class="brand" href="../dashboard/dashboard.html" aria-label="SPE جامعة طيبة">
+            <div class="sidebar-logo-wrapper">
+              <img src="../clubteam/spe-logo.svg" alt="SPE Taibah University Logo" class="sidebar-logo" />
+            </div>
+          </a>
+          <p class="sidebar__label">إدارة منصة النادي</p>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+          <a class="nav-link" href="../dashboard/dashboard.html"><span>لوحة التحكم</span></a>
+          <a class="nav-link" href="../Events/Events.html"><span>الفعاليات</span></a>
+          <a class="nav-link" href="../Registration/Registration.html"><span>التسجيل والحضور</span></a>
+          <a class="nav-link" href="#"><span>الأعضاء</span></a>
+          <a class="nav-link" href="../add-content/add-content.html"><span>الأخبار والمحتوى</span></a>
+          <a class="nav-link" href="#"><span>المعرض</span></a>
+          <a class="nav-link" href="../clubteam/clubteam.html"><span>فريق النادي</span></a>
+          <a class="nav-link" href="../Certificates/Certificates.html"><span>الشهادات</span></a>
+          <a class="nav-link" href="#"><span>الإشعارات</span></a>
+          <button class="nav-link nav-link--button" type="button" data-permissions><span>الصلاحيات</span></button>
+          <a class="nav-link is-active" href="sittings.html" aria-current="page"><span>الإعدادات</span></a>
+        </nav>
+
+        <footer class="sidebar__footer">
+          <div class="user-profile">
+            <strong class="user-profile__name">جمانة الجهني</strong>
+            <span class="user-profile__role">Webmaster <bdi>•</bdi> مدير النظام</span>
+          </div>
+          <a class="logout-link" href="#logout" data-logout>تسجيل الخروج</a>
+        </footer>
+      </aside>
+
+      <main class="main-content">
+        <!-- عنوان الصفحة -->
+        <header class="page-header">
+          <h1>الإعدادات</h1>
+          <p>إدارة وتشغيل منصة SPE بجامعة طيبة</p>
+        </header>
+
+        <!-- إعدادات المنصة -->
+        <section class="settings-card" aria-labelledby="settings-title">
+          <h2 id="settings-title">إعدادات المنصة</h2>
+          <form class="settings-form" novalidate>
+            <div class="form-row">
+              <label for="club-name">اسم النادي</label>
+              <input id="club-name" name="clubName" type="text" value="SPE Student Chapter - Taibah University" required />
+            </div>
+            <div class="form-row">
+              <label for="official-email">البريد الرسمي</label>
+              <input id="official-email" name="officialEmail" type="email" value="spe.club@taibahu.edu.sa" required />
+            </div>
+            <div class="form-row">
+              <label for="membership-link">رابط عضوية SPE</label>
+              <input id="membership-link" name="membershipLink" type="text" value="spe.org/en/join/" required />
+            </div>
+            <div class="form-row">
+              <label for="academic-year">السنة الأكاديمية</label>
+              <input id="academic-year" name="academicYear" type="text" value="2026 / 2027" required />
+            </div>
+            <p class="form-error" role="alert" aria-live="polite"></p>
+            <button class="save-button" type="submit">حفظ التغييرات</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="sittings.js"></script>
+  </body>
+</html>

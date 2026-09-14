@@ -278,14 +278,10 @@ button {
 
 .main-content {
     width: calc(100% - 238px);
-
     min-height: 100vh;
-
     margin-right: 238px;
-
-    padding: 70px 68px 70px;
+    padding: 60px 68px 70px;
 }
-
 
 
 /* =========================================
@@ -293,35 +289,31 @@ button {
 ========================================= */
 
 .page-header {
-    margin-bottom: 40px;
-
+    margin-bottom: 26px;
     text-align: right;
 }
-
 
 .page-header h1 {
     margin: 0;
 
     color: var(--text);
 
-    font-size: clamp(36px, 3.4vw, 52px);
-
-    line-height: 1.2;
+    font-size: 40px;
+    line-height: 1.25;
 
     font-weight: 800;
 }
 
-
 .page-header p {
-    margin: 10px 0 0;
+    margin: 3px 0 0;
 
     color: #8192a9;
 
-    font-size: 17px;
+    font-size: 14px;
+    line-height: 1.5;
 
     font-weight: 400;
 }
-
 
 
 /* =========================================
@@ -334,65 +326,60 @@ button {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 26px;
+    gap: 20px;
 
-    margin-bottom: 72px;
+    margin-bottom: 50px;
 }
-
 
 .stat-card {
     position: relative;
 
-    min-height: 184px;
+    min-height: 134px;
 
     display: flex;
-
     align-items: center;
 
-    padding: 26px 28px;
+    padding: 17px 20px;
 
     background: var(--surface);
 
     border: 1px solid var(--border);
-
-    border-radius: 13px;
+    border-radius: 8px;
 
     box-shadow:
-        0 3px 10px rgba(16, 39, 68, .025);
+        0 2px 8px rgba(16, 39, 68, .025);
 
     overflow: hidden;
 }
 
+
+/* الشريط الملون */
 
 .stat-card::after {
     content: "";
 
     position: absolute;
 
-    top: 25px;
-    right: 25px;
+    top: 16px;
+    right: 16px;
 
-    width: 11px;
-    height: 138px;
+    width: 7px;
+    height: 102px;
 
     border-radius: 20px;
 }
-
 
 .stat-card--certificates::after {
     background: var(--orange);
 }
 
-
 .stat-card--registrations::after {
     background: var(--green);
 }
 
-
 .stat-card--events::after {
     background: var(--light-blue);
 }
-
 
 .stat-card--members::after {
     background: var(--green);
@@ -402,70 +389,65 @@ button {
 .stat-card__content {
     width: 100%;
 
-    padding-right: 28px;
+    padding-right: 18px;
 
     text-align: right;
 }
 
-
 .stat-card__label {
-    margin: 0 0 17px;
+    margin: 0 0 7px;
 
     color: #8795a9;
 
-    font-size: 18px;
+    font-size: 13px;
+
+    line-height: 1.6;
 
     font-weight: 500;
 }
-
 
 .stat-card__value {
     display: block;
 
     color: var(--text);
 
-    font-size: 42px;
+    font-size: 28px;
 
     line-height: 1;
 
     font-weight: 800;
 
     direction: ltr;
-
     text-align: right;
 }
-
 
 .stat-card__trend {
     display: block;
 
-    margin-top: 9px;
+    margin-top: 3px;
 
-    font-size: 16px;
+    font-size: 10px;
+
+    line-height: 1.5;
 
     font-weight: 700;
 }
-
 
 .stat-card--certificates .stat-card__trend {
     color: var(--orange);
 }
 
-
 .stat-card--registrations .stat-card__trend {
     color: var(--green);
 }
-
 
 .stat-card--events .stat-card__trend {
     color: var(--light-blue);
 }
 
-
 .stat-card--members .stat-card__trend {
     color: var(--green);
 }
-
 
 
 /* =========================================
@@ -473,22 +455,19 @@ button {
 ========================================= */
 
 .section-heading {
-    margin-bottom: 22px;
+    margin-bottom: 12px;
 }
-
 
 .section-heading h2 {
     margin: 0;
 
     color: var(--text);
 
-    font-size: 29px;
-
-    line-height: 1.3;
+    font-size: 20px;
+    line-height: 1.4;
 
     font-weight: 800;
 }
-
 
 
 /* =========================================
@@ -496,14 +475,12 @@ button {
 ========================================= */
 
 .quick-actions {
-    margin-bottom: 56px;
+    margin-bottom: 44px;
 }
-
 
 .quick-actions .section-heading {
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
-
 
 .quick-actions__buttons {
     display: grid;
@@ -511,27 +488,26 @@ button {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 26px;
+    gap: 16px;
 }
 
-
 .button {
-    min-height: 74px;
+    min-height: 54px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    gap: 7px;
+    gap: 5px;
 
-    padding: 12px 22px;
-
-    border-radius: 10px;
+    padding: 8px 14px;
 
     border: 1px solid var(--border);
+    border-radius: 6px;
 
-    font-size: 18px;
+    font-size: 13px;
+    line-height: 1.4;
 
     font-weight: 700;
 
@@ -541,11 +517,9 @@ button {
         box-shadow .18s ease;
 }
 
-
 .button:hover {
     transform: translateY(-1px);
 }
-
 
 .button--primary {
     border-color: var(--blue);
@@ -555,14 +529,12 @@ button {
     color: #fff;
 
     box-shadow:
-        0 5px 12px rgba(32, 95, 174, .14);
+        0 4px 10px rgba(32, 95, 174, .13);
 }
-
 
 .button--primary:hover {
     background: var(--blue-hover);
 }
-
 
 .button--secondary {
     background: #fff;
@@ -570,18 +542,14 @@ button {
     color: var(--blue);
 }
 
-
 .button--secondary:hover {
     background: #f8fbff;
 }
 
-
 .button span {
-    font-size: 23px;
-
+    font-size: 17px;
     line-height: 1;
 }
-
 
 
 /* =========================================
@@ -591,31 +559,32 @@ button {
 .content-grid {
     display: grid;
 
+    direction: ltr;
+
     grid-template-columns:
         minmax(0, 1.65fr)
-        minmax(350px, .95fr);
+        minmax(330px, .95fr);
 
-    gap: 40px;
+    gap: 30px;
 
     align-items: stretch;
 }
 
-
 .panel {
-    min-height: 440px;
+    min-height: 430px;
 
-    padding: 42px 40px;
+    direction: rtl;
+
+    padding: 26px 28px;
 
     background: var(--surface);
 
     border: 1px solid var(--border);
-
-    border-radius: 13px;
+    border-radius: 8px;
 
     box-shadow:
-        0 3px 10px rgba(16, 39, 68, .025);
+        0 2px 8px rgba(16, 39, 68, .025);
 }
-
 
 
 /* =========================================
@@ -626,13 +595,11 @@ button {
     order: 2;
 }
 
-
 .upcoming-event .section-heading {
     text-align: center;
 
-    margin-bottom: 28px;
+    margin-bottom: 14px;
 }
-
 
 .upcoming-event__body {
     display: flex;
@@ -644,16 +611,15 @@ button {
     text-align: center;
 }
 
-
 .status-badge {
     display: inline-flex;
 
     align-items: center;
     justify-content: center;
 
-    min-width: 190px;
+    min-width: 116px;
 
-    padding: 9px 20px;
+    padding: 5px 11px;
 
     border-radius: 30px;
 
@@ -661,39 +627,38 @@ button {
 
     color: #fff;
 
-    font-size: 17px;
+    font-size: 11px;
+
+    line-height: 1.5;
 
     font-weight: 700;
 }
 
-
 .upcoming-event h3 {
-    margin: 32px 0 13px;
+    margin: 18px 0 8px;
 
     max-width: 420px;
 
     color: var(--text);
 
-    font-size: 31px;
+    font-size: 22px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
     font-weight: 800;
 }
-
 
 .event-details {
     display: flex;
 
     justify-content: center;
 
-    gap: 7px;
+    gap: 6px;
 
     color: #8293aa;
 
-    font-size: 16px;
+    font-size: 11px;
 }
-
 
 .event-details span:first-child::after {
     content: " • ";
@@ -701,24 +666,21 @@ button {
     margin: 0 4px;
 }
 
-
 .event-location {
-    margin-top: 15px;
+    margin-top: 8px;
 
     color: #8293aa;
 
-    font-size: 16px;
+    font-size: 11px;
 }
-
 
 .upcoming-event__button {
     width: 100%;
 
-    max-width: 365px;
+    max-width: 226px;
 
-    margin-top: 47px;
+    margin-top: 26px;
 }
-
 
 
 /* =========================================
@@ -729,13 +691,11 @@ button {
     order: 1;
 }
 
-
 .activities .section-heading {
     text-align: right;
 
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
-
 
 .activity-list {
     list-style: none;
@@ -744,64 +704,60 @@ button {
     padding: 0;
 }
 
-
 .activity-list li {
-    min-height: 84px;
+    min-height: 68px;
 
     display: grid;
 
     grid-template-columns:
-        15px
+        10px
         minmax(0, 1fr)
-        90px;
+        62px;
 
     align-items: center;
 
-    column-gap: 14px;
+    column-gap: 9px;
 
     border-bottom: 1px solid #dfe5ec;
 }
-
 
 .activity-list li:last-child {
     border-bottom: 0;
 }
 
-
 .activity-list__dot {
-    width: 14px;
-    height: 14px;
+    width: 8px;
+    height: 8px;
 
     border-radius: 50%;
 
     background: #4a96df;
 
     box-shadow:
-        0 0 0 4px rgba(74, 150, 223, .08);
+        0 0 0 3px rgba(74, 150, 223, .08);
 }
-
 
 .activity-list__text {
     color: #25384f;
 
-    font-size: 17px;
+    font-size: 12px;
+
+    line-height: 1.6;
 
     font-weight: 500;
 
     text-align: right;
 }
 
-
 .activity-list time {
     color: #93a2b5;
 
-    font-size: 15px;
+    font-size: 10px;
 
     text-align: left;
 
     white-space: nowrap;
 }
-
 
 
 /* =========================================
@@ -829,7 +785,6 @@ button {
     font-size: 14px;
 
     opacity: 0;
-
     visibility: hidden;
 
     transform: translateY(12px);
@@ -840,15 +795,12 @@ button {
         transform .2s ease;
 }
 
-
 .toast.is-visible {
     opacity: 1;
-
     visibility: visible;
 
     transform: translateY(0);
 }
-
 
 
 /* =========================================
@@ -862,17 +814,14 @@ button {
         padding-right: 40px;
     }
 
-
     .stats-grid {
         gap: 18px;
     }
-
 
     .stat-card {
         padding-left: 20px;
         padding-right: 20px;
     }
-
 
     .quick-actions__buttons {
         gap: 18px;
@@ -888,22 +837,18 @@ button {
             repeat(2, minmax(0, 1fr));
     }
 
-
     .quick-actions__buttons {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
-
     .content-grid {
         grid-template-columns: 1fr;
     }
 
-
     .upcoming-event {
         order: 1;
     }
-
 
     .activities {
         order: 2;
@@ -916,95 +861,72 @@ button {
 
     .sidebar {
         position: static;
-
         width: 100%;
-
         min-height: auto;
-
         padding: 16px;
     }
-
 
     .sidebar__top {
         padding: 0 5px 15px;
     }
 
-
     .sidebar-logo-wrapper {
         min-height: 180px;
-
         margin: -25px auto 0;
     }
 
-
     .sidebar-logo {
         width: 170px;
-
         transform: scale(1.3);
     }
-
 
     .sidebar__label {
         margin: -5px 0 0;
     }
-
 
     .sidebar__nav {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
-
     .sidebar__footer {
         padding: 20px 5px 0;
     }
 
-
     .main-content {
         width: 100%;
-
         margin-right: 0;
-
         padding: 40px 18px 50px;
     }
-
 
     .page-header {
         margin-bottom: 30px;
     }
 
-
     .page-header h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
-
 
     .page-header p {
         font-size: 15px;
     }
 
-
     .stats-grid {
         grid-template-columns: 1fr;
-
         margin-bottom: 45px;
     }
-
 
     .quick-actions__buttons {
         grid-template-columns: 1fr;
     }
 
-
     .content-grid {
         grid-template-columns: 1fr;
     }
 
-
     .panel {
         padding: 30px 22px;
     }
-
 
     .activity-list li {
         grid-template-columns:
@@ -1016,10 +938,8 @@ button {
         padding: 14px 0;
     }
 
-
     .activity-list time {
         grid-column: 2;
-
         text-align: right;
     }
 
@@ -1032,26 +952,21 @@ button {
         grid-template-columns: 1fr;
     }
 
-
     .stat-card {
         min-height: 165px;
     }
-
 
     .stat-card::after {
         height: 120px;
     }
 
-
     .stat-card__value {
         font-size: 36px;
     }
 
-
     .section-heading h2 {
         font-size: 25px;
     }
-
 
     .upcoming-event h3 {
         font-size: 26px;
@@ -1062,24 +977,14 @@ button {
 
 /* =========================================
    الخط المعتمد للمشروع
-   ========================================= */
+========================================= */
 
 html,
 body,
 button,
 input,
 select,
-textarea {
-    font-family: "Cairo", Tahoma, Arial, sans-serif;
-}
-
-body {
-    font-family: "Cairo", Tahoma, Arial, sans-serif;
-}
-
-
-/* التأكد من أن جميع عناصر الصفحة تستخدم نفس الخط */
-
+textarea,
 .dashboard-layout,
 .sidebar,
 .main-content,

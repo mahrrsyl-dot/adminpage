@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="إضافة عضو لفريق نادي SPE بجامعة طيبة" />
+    <title>إضافة عضو للفريق | SPE جامعة طيبة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="add-team-member.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <aside class="sidebar" aria-label="القائمة الرئيسية">
+        <div class="sidebar__top">
+          <a class="brand" href="../dashboard/dashboard.html" aria-label="SPE جامعة طيبة"><div class="sidebar-logo-wrapper"><img src="../clubteam/spe-logo.svg" alt="SPE Taibah University Logo" class="sidebar-logo" /></div></a>
+          <p class="sidebar__label">إدارة منصة النادي</p>
+        </div>
+        <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+          <a class="nav-link" href="../dashboard/dashboard.html"><span>لوحة التحكم</span></a>
+          <a class="nav-link" href="../Events/Events.html"><span>الفعاليات</span></a>
+          <a class="nav-link" href="../Registration/Registration.html"><span>التسجيل والحضور</span></a>
+          <a class="nav-link" href="#"><span>الأعضاء</span></a>
+          <a class="nav-link" href="../add-content/add-content.html"><span>الأخبار والمحتوى</span></a>
+          <a class="nav-link" href="#"><span>المعرض</span></a>
+          <a class="nav-link is-active" href="../clubteam/clubteam.html" aria-current="page"><span>فريق النادي</span></a>
+          <a class="nav-link" href="../Certificates/Certificates.html"><span>الشهادات</span></a>
+          <a class="nav-link" href="../send-notification/send-notification.html"><span>الإشعارات</span></a>
+          <a class="nav-link" href="#"><span>الصلاحيات</span></a>
+          <a class="nav-link" href="../sittings/sittings.html"><span>الإعدادات</span></a>
+        </nav>
+        <footer class="sidebar__footer"><div class="user-profile"><strong class="user-profile__name">جمانة الجهني</strong><span class="user-profile__role">Webmaster <bdi>•</bdi> مدير النظام</span></div><a class="logout-link" href="#logout" data-logout>تسجيل الخروج</a></footer>
+      </aside>
+
+      <main class="main-content">
+        <header class="page-header"><h1>إضافة عضو للفريق</h1><p>أضف بيانات العضو وحدد منصبه وصلاحياته</p></header>
+        <section class="member-card" aria-labelledby="member-title">
+          <h2 id="member-title">بيانات العضو</h2>
+          <form class="member-form" novalidate>
+            <div class="member-fields">
+              <div class="fields-column">
+                <div class="field-group"><label for="arabic-name">الاسم الكامل <bdi>*</bdi></label><input id="arabic-name" name="arabicName" type="text" placeholder="اسم العضو" required /></div>
+                <div class="field-group"><label for="member-role">المنصب <bdi>*</bdi></label><select id="member-role" name="role" required><option value="">اختر المنصب</option><option>President</option><option>Vice President</option><option>Program Chairperson</option><option>Membership Chairperson</option><option>Webmaster</option><option>Media</option><option>Member</option></select></div>
+                <div class="field-group"><label for="university-email">البريد الجامعي</label><input id="university-email" name="email" type="email" placeholder="name@taibahu.edu.sa" /></div>
+              </div>
+              <div class="fields-column">
+                <div class="field-group"><label for="english-name">الاسم بالإنجليزية</label><input id="english-name" name="englishName" type="text" placeholder="Full Name" /></div>
+                <div class="field-group"><label for="department">القسم / اللجنة</label><input id="department" name="department" type="text" placeholder="التقنية والموقع" /></div>
+                <div class="field-group"><label for="member-status">حالة العضو</label><select id="member-status" name="status"><option>نشط</option><option>غير نشط</option></select></div>
+              </div>
+            </div>
+
+            <fieldset class="permissions"><legend>الصلاحيات</legend><div class="permission-columns"><div><label><input type="checkbox" name="permissions" value="events" checked /> إدارة الفعاليات</label><label><input type="checkbox" name="permissions" value="content" checked /> إدارة الأخبار والمحتوى</label><label><input type="checkbox" name="permissions" value="certificates" /> إصدار الشهادات</label><label><input type="checkbox" name="permissions" value="team" /> إدارة فريق النادي</label></div><div><label><input type="checkbox" name="permissions" value="members" checked /> إدارة الأعضاء</label><label><input type="checkbox" name="permissions" value="gallery" /> إدارة المعرض</label><label><input type="checkbox" name="permissions" value="notifications" /> إرسال الإشعارات</label><label><input type="checkbox" name="permissions" value="permissions" /> إدارة الصلاحيات</label></div></div></fieldset>
+            <p class="permissions-note">ملاحظة: يمكن إعطاء العضو صلاحيات حسب منصبه فقط.</p>
+            <p class="form-error" role="alert" aria-live="polite"></p>
+            <div class="form-actions"><button class="primary-button" type="submit">إضافة العضو</button><a class="secondary-button" href="../clubteam/clubteam.html">إلغاء</a></div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="add-team-member.js"></script>
+  </body>
+</html>

@@ -1,13 +1,20 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-	const members = [
+	const defaultMembers = [
 		{ name: "راكان محمد الجهني", role: "President" },
 		{ name: "أصالة عمر الجهني", role: "Vice President" },
 		{ name: "جوري عبدالجبار الجهني", role: "Program Chairperson" },
 		{ name: "لمار وليد العباسي", role: "Membership Chairperson" },
 		{ name: "جمانة عبدالعزيز الجهني", role: "Webmaster" },
 	];
+	let savedMembers = [];
+	try {
+		savedMembers = JSON.parse(localStorage.getItem("spe-team-members")) || [];
+	} catch {
+		localStorage.removeItem("spe-team-members");
+	}
+	const members = [...defaultMembers, ...savedMembers.map((member) => ({ name: member.arabicName, role: member.role }))];
 	const editModal = document.querySelector('[data-modal="edit"]');
 	const permissionsModal = document.querySelector('[data-modal="permissions"]');
 	const editForm = document.querySelector("[data-edit-form]");
@@ -34,14 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (editModal.hidden && permissionsModal.hidden) document.body.style.overflow = "";
 	};
 
+	const openMemberEditor = (button) => {
+		selectedMemberIndex = Number(button.dataset.editMember);
+		memberName.value = members[selectedMemberIndex].name;
+		memberRole.value = members[selectedMemberIndex].role;
+		openModal(editModal);
+		memberName.focus();
+	};
+
+	const memberList = document.querySelector(".member-list");
+	savedMembers.forEach((member, index) => {
+		const memberIndex = defaultMembers.length + index;
+		const row = document.createElement("article");
+		row.className = "member-row";
+		row.dataset.memberIndex = memberIndex;
+		const name = document.createElement("strong");
+		name.textContent = member.arabicName;
+		const role = document.createElement("span");
+		role.textContent = member.role;
+		const editButton = document.createElement("button");
+		editButton.type = "button";
+		editButton.className = "edit-button";
+		editButton.dataset.editMember = memberIndex;
+		editButton.textContent = "تعديل";
+		editButton.addEventListener("click", () => openMemberEditor(editButton));
+		row.append(name, role, editButton);
+		memberList.append(row);
+	});
+
 	document.querySelectorAll("[data-edit-member]").forEach((button) => {
-		button.addEventListener("click", () => {
-			selectedMemberIndex = Number(button.dataset.editMember);
-			memberName.value = members[selectedMemberIndex].name;
-			memberRole.value = members[selectedMemberIndex].role;
-			openModal(editModal);
-			memberName.focus();
-		});
+		button.addEventListener("click", () => openMemberEditor(button));
 	});
 
 	editForm.addEventListener("submit", (event) => {

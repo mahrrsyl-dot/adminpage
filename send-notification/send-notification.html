@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="إرسال إشعارات منصة SPE بجامعة طيبة" />
+    <title>إرسال إشعار | SPE جامعة طيبة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="send-notification.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- الشريط الجانبي -->
+      <aside class="sidebar" aria-label="القائمة الرئيسية">
+        <div class="sidebar__top">
+          <a class="brand" href="../dashboard/dashboard.html" aria-label="SPE جامعة طيبة">
+            <div class="sidebar-logo-wrapper"><img src="../clubteam/spe-logo.svg" alt="SPE Taibah University Logo" class="sidebar-logo" /></div>
+          </a>
+          <p class="sidebar__label">إدارة منصة النادي</p>
+        </div>
+        <nav class="sidebar__nav" aria-label="روابط لوحة التحكم">
+          <a class="nav-link" href="../dashboard/dashboard.html"><span>لوحة التحكم</span></a>
+          <a class="nav-link" href="../Events/Events.html"><span>الفعاليات</span></a>
+          <a class="nav-link" href="../Registration/Registration.html"><span>التسجيل والحضور</span></a>
+          <a class="nav-link" href="#"><span>الأعضاء</span></a>
+          <a class="nav-link" href="../add-content/add-content.html"><span>الأخبار والمحتوى</span></a>
+          <a class="nav-link" href="#"><span>المعرض</span></a>
+          <a class="nav-link" href="../clubteam/clubteam.html"><span>فريق النادي</span></a>
+          <a class="nav-link" href="../Certificates/Certificates.html"><span>الشهادات</span></a>
+          <a class="nav-link is-active" href="send-notification.html" aria-current="page"><span>الإشعارات</span></a>
+          <a class="nav-link" href="#"><span>الصلاحيات</span></a>
+          <a class="nav-link" href="../sittings/sittings.html"><span>الإعدادات</span></a>
+        </nav>
+        <footer class="sidebar__footer">
+          <div class="user-profile"><strong class="user-profile__name">جمانة الجهني</strong><span class="user-profile__role">Webmaster <bdi>•</bdi> مدير النظام</span></div>
+          <a class="logout-link" href="#logout" data-logout>تسجيل الخروج</a>
+        </footer>
+      </aside>
+
+      <main class="main-content">
+        <header class="page-header"><h1>إرسال إشعار</h1><p>حدد الجمهور والقناة ووقت الإرسال</p></header>
+        <section class="notification-card" aria-label="نموذج إرسال إشعار">
+          <form class="notification-form" novalidate>
+            <!-- العمود الأيمن -->
+            <div class="form-column form-column--message">
+              <div class="field-group"><label for="notification-title">عنوان الإشعار <bdi>*</bdi></label><input id="notification-title" name="title" type="text" placeholder="مثال: التسجيل في الفعالية مفتوح الآن" required /></div>
+              <div class="field-group"><label for="notification-message">الرسالة <bdi>*</bdi></label><textarea id="notification-message" name="message" placeholder="اكتب رسالة قصيرة وواضحة للمستخدمين..." required></textarea></div>
+              <fieldset class="channels"><legend>قنوات الإرسال</legend><label><input type="checkbox" name="channels" value="platform" checked /> إشعار داخل المنصة</label><label><input type="checkbox" name="channels" value="email" checked /> بريد إلكتروني</label><label><input type="checkbox" name="channels" value="sms" /> رسالة SMS</label></fieldset>
+              <section class="notification-preview" aria-live="polite"><strong>معاينة الإشعار</strong><h2 data-preview-title>التسجيل في الفعالية مفتوح الآن</h2><p data-preview-message>اضغط لعرض التفاصيل والتسجيل</p></section>
+              <button class="primary-button schedule-button" type="submit">جدولة الإشعار</button>
+            </div>
+
+            <!-- العمود الأيسر -->
+            <div class="form-column form-column--options">
+              <div class="field-group"><label for="notification-type">نوع الإشعار</label><select id="notification-type" name="type"><option value="event">فعالية</option><option value="news">خبر</option><option value="general">تنبيه عام</option></select></div>
+              <fieldset class="audience"><legend>الجمهور</legend><label><input type="radio" name="audience" value="all" checked /> كل الأعضاء</label><label><input type="radio" name="audience" value="event" /> المسجلون في فعالية محددة</label><label><input type="radio" name="audience" value="team" /> أعضاء فريق النادي</label><label><input type="radio" name="audience" value="custom" /> مجموعة مخصصة</label></fieldset>
+              <fieldset class="send-time"><legend>وقت الإرسال</legend><div class="send-time__options"><label><input type="radio" name="sendTiming" value="schedule" checked /> جدولة الإرسال</label><label><input type="radio" name="sendTiming" value="now" /> إرسال الآن</label></div></fieldset>
+              <div class="datetime-fields"><input id="send-date" name="date" type="text" value="15 / 09 / 2026" aria-label="تاريخ الإرسال" /><input id="send-time" name="time" type="text" value="08:00 مساء" aria-label="وقت الإرسال" /></div>
+              <button class="secondary-button draft-button" type="button">حفظ كمسودة</button>
+            </div>
+            <p class="form-error" role="alert" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="send-notification.js"></script>
+  </body>
+</html>
