@@ -171,7 +171,7 @@ button {
 
     color: #b9c9df;
 
-    font-size: 13px;
+    font-size: 12px;
 
     text-align: center;
 }
@@ -203,7 +203,7 @@ button {
     color: #edf5ff;
 
     font-family: "Cairo", Tahoma, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
 
     text-align: right;
@@ -254,7 +254,7 @@ button {
 
 
 .user-profile__name {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 800;
 }
 
@@ -315,7 +315,7 @@ button {
 
     color: #6f8198;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -325,7 +325,7 @@ button {
 
     color: var(--text);
 
-    font-size: clamp(2rem, 3vw, 2.7rem);
+    font-size: clamp(1.9rem, 3vw, 2.25rem);
 
     font-weight: 800;
 
@@ -338,7 +338,7 @@ button {
 
     color: #8191a6;
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -410,9 +410,9 @@ button {
 
     color: var(--text);
 
-    font-size: 28px;
+    font-size: 22px;
 
-    font-weight: 800;
+    font-weight: 700;
 
     line-height: 1.35;
 }
@@ -423,7 +423,7 @@ button {
 
     color: #8b9aae;
 
-    font-size: 18px;
+    font-size: 14px;
 
     font-weight: 400;
 }
@@ -452,7 +452,7 @@ button {
 
     color: #ffffff;
 
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
 
     text-decoration: none;
@@ -523,9 +523,9 @@ button {
 
     color: var(--text);
 
-    font-size: 27px;
+    font-size: 21px;
 
-    font-weight: 800;
+    font-weight: 700;
 
     line-height: 1.4;
 }
@@ -536,9 +536,9 @@ button {
 
     color: var(--text);
 
-    font-size: 18px;
+    font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 500;
 }
 
 
@@ -563,7 +563,7 @@ button {
 
     color: #ffffff;
 
-    font-size: 16px;
+    font-size: 13px;
 
     font-weight: 700;
 
@@ -578,7 +578,7 @@ button {
 .review-link {
     color: var(--blue);
 
-    font-size: 18px;
+    font-size: 14px;
 
     font-weight: 700;
 
@@ -621,7 +621,7 @@ button {
 
 
     .content-card h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
 
@@ -804,19 +804,19 @@ button {
 
 
     .content-card h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
 
     .content-card p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 
     .content-card__button {
         min-height: 58px;
 
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
@@ -834,12 +834,12 @@ button {
     .pending-content__details h2 {
         margin-bottom: 18px;
 
-        font-size: 23px;
+        font-size: 20px;
     }
 
 
     .pending-content__details p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 }
