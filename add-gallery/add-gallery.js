@@ -152,21 +152,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =====================================================
-       LANGUAGE SWITCH
-    ===================================================== */
-
-    const languageSwitch =
-        document.querySelector(".language-switch");
-
-    if (languageSwitch) {
-
-        languageSwitch.addEventListener("click", () => {
-
-            alert("تغيير اللغة سيتم ربطه لاحقًا.");
-
-        });
-
-    }
-
 });

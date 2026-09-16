@@ -58,9 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // أضف مسار صفحة تسجيل الدخول هنا عند توفرها.
   });
 
-  document.querySelector("[data-permissions]").addEventListener("click", () => {
-    showToast("سيتم فتح إدارة الصلاحيات هنا.");
-  });
+  const permissionsLink = document.querySelector("[data-permissions]");
+  if (permissionsLink) {
+    permissionsLink.addEventListener("click", () => {
+      showToast("سيتم فتح إدارة الصلاحيات هنا.");
+    });
+  }
 
   loadSettings();
 });
