@@ -47,6 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const action = button.dataset.action;
 
+                const destinations = {
+                    "create-event": "../Events/CreateEvent/CreateEvent.html",
+                    "add-news": "../addnews/addnews.html",
+                    "send-notification": "../send-notification/send-notification.html",
+                    "issue-certificates": "../Certificates/Certificates.html"
+                };
+
+                if (destinations[action]) {
+                    window.location.href = destinations[action];
+                    return;
+                }
+
                 if (actionLabels[action]) {
                     showToast(actionLabels[action]);
                 }
