@@ -6,7 +6,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--page-bg); color: var(--text); font-family: "Tajawal", sans-serif; direction: rtl; }
+body { background: var(--page-bg); color: var(--text); font-family: "Cairo", sans-serif; direction: rtl; }
 svg { display: block; width: 1.35rem; height: 1.35rem; fill: none; stroke: currentColor; }
 button { font: inherit; outline: none; cursor: pointer; }
 a { text-decoration: none; }
@@ -18,7 +18,7 @@ a { text-decoration: none; }
 .brand__mark { width: 2.5rem; height: 2.5rem; border: 1px solid rgba(255,255,255,0.18); border-radius: 50%; display: grid; place-items: center; }
 .brand__mark svg { fill: white; stroke: none; }
 .brand__mark circle { fill: #f7a225; }
-.brand__name { font-size: 1.5rem; font-weight: 700; font-family: Arial; direction: ltr; }
+.brand__name { font-size: 1.5rem; font-weight: 700; font-family: "Montserrat", Arial, sans-serif; direction: ltr; }
 .sidebar__label { color: #b9c9df; margin-top: 1rem; }
 .sidebar__nav { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 2rem; }
 .nav-link { display: flex; align-items: center; gap: 0.8rem; padding: 0.8rem 1rem; border-radius: 0.8rem; color: #edf5ff; font-weight: 500; transition: 0.2s; }
@@ -48,7 +48,7 @@ a { text-decoration: none; }
 .stat-card--total::after { background: var(--blue-700); }
 
 .stat-title { display: block; color: var(--muted); font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; }
-.stat-value { display: block; font-size: 2.5rem; font-weight: 800; color: var(--navy-950); font-family: Arial; line-height: 1; }
+.stat-value { display: block; font-size: 2.5rem; font-weight: 800; color: var(--navy-950); font-family: "Montserrat", Arial, sans-serif; line-height: 1; }
 .stat-sub { display: block; font-size: 0.9rem; font-weight: 700; margin-top: 0.5rem; }
 
 /* ألوان النسب والنصوص */
@@ -74,7 +74,7 @@ a { text-decoration: none; }
 .data-table th { padding: 1rem; color: var(--navy-950); font-weight: 800; border-bottom: 1px solid var(--border); text-align: center; }
 .data-table td { padding: 1.5rem 1rem; border-bottom: 1px solid var(--page-bg); font-weight: 500; }
 .fw-bold { font-weight: 800; color: var(--navy-950); }
-.text-muted { color: var(--muted); font-family: Arial; }
+.text-muted { color: var(--muted); font-family: "Montserrat", Arial, sans-serif; }
 
 /* البادجات */
 .badge { display: inline-block; padding: 0.4rem 1.5rem; border-radius: 99px; color: white; font-size: 0.9rem; font-weight: 700; min-width: 90px; }

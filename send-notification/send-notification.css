@@ -1,7 +1,7 @@
 :root { --navy:#041b36; --blue:#205fae; --page-bg:#f4f6fa; --surface:#fff; --border:#d7dce4; --text:#081b37; --muted:#9aa4b2; }
 * { box-sizing:border-box; }
 html { min-width:320px; }
-body { margin:0; background:var(--page-bg); color:var(--text); font-family:"Tajawal",Tahoma,Arial,sans-serif; }
+body { margin:0; background:var(--page-bg); color:var(--text); font-family:"Cairo",Tahoma,Arial,sans-serif; }
 button,input,textarea,select { font:inherit; }
 button { cursor:pointer; }
 .dashboard-layout { min-height:100vh; direction:rtl; }

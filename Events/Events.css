@@ -16,7 +16,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { min-width: 320px; background: var(--page-bg); color: var(--text); font-family: "Tajawal", Tahoma, Arial, sans-serif; direction: rtl; }
+body { min-width: 320px; background: var(--page-bg); color: var(--text); font-family: "Cairo", Tahoma, Arial, sans-serif; direction: rtl; }
 button, a { font: inherit; }
 button { cursor: pointer; }
 svg { display: block; width: 1.35rem; height: 1.35rem; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
@@ -31,7 +31,7 @@ svg { display: block; width: 1.35rem; height: 1.35rem; fill: none; stroke: curre
 .brand__mark { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 50%; }
 .brand__mark svg { width: 1.75rem; height: 1.75rem; fill: #ffffff; stroke: none; }
 .brand__mark circle { fill: var(--orange-500); }
-.brand__name { direction: ltr; font-family: Arial, sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 0.06em; }
+.brand__name { direction: ltr; font-family: "Montserrat", Arial, sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 0.06em; }
 .sidebar__label { margin: 1.4rem 0 0; color: #b9c9df; font-size: 1rem; }
 .sidebar__nav { display: grid; flex: 1 1 auto; min-height: 0; gap: 0.42rem; overflow-y: auto; scrollbar-width: thin; }
 .nav-link, .logout-link { display: flex; align-items: center; gap: 0.8rem; min-height: 3.6rem; padding: 0.75rem 1.05rem; border-radius: 0.8rem; color: #edf5ff; font-size: 1.07rem; font-weight: 500; text-decoration: none; transition: 180ms ease; }

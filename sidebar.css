@@ -1,6 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap");
+
 :root {
   --sidebar-navy: #041b36;
   --sidebar-blue: #205fae;
+}
+
+html body {
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+html[lang="en"] body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+html body * {
+  font-family: inherit !important;
 }
 
 .sidebar {
@@ -153,7 +169,7 @@ html[dir="ltr"] .main-content { text-align: left; }
   .main-content { width: 100%; margin-right: 0; }
 }
 
-/* New shared SPE sidebar surface. Page-specific sidebar rules do not target these classes. */
+/* Shared SPE sidebar surface. */
 .spe-sidebar {
   position: fixed;
   top: 0;
@@ -162,14 +178,22 @@ html[dir="ltr"] .main-content { text-align: left; }
   left: auto;
   z-index: 20;
   width: 238px;
+  min-width: 238px;
+  max-width: 238px;
+  flex: 0 0 238px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 28px 16px 22px;
-  overflow: hidden;
+  padding: 26px 18px 20px;
+  overflow: visible;
   background: #041b36;
   color: #fff;
   direction: rtl;
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
+}
+
+html[lang="en"] .spe-sidebar {
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 .spe-sidebar__top {
@@ -178,7 +202,7 @@ html[dir="ltr"] .main-content { text-align: left; }
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0 8px 24px;
+  padding: 8px 14px 27px;
 }
 
 .spe-sidebar__brand {
@@ -186,35 +210,33 @@ html[dir="ltr"] .main-content { text-align: left; }
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 360px;
+  min-height: 145px;
   color: inherit;
   text-decoration: none;
 }
 
 .spe-sidebar__logo-wrapper {
   width: 100%;
-  min-height: 360px;
+  min-height: 125px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
-  margin: -55px auto 12px;
+  margin: 0 auto 12px;
 }
 
 .spe-sidebar__logo {
   display: block;
-  width: 210px;
+  width: 125px;
   max-width: none;
   height: auto;
   margin: 0;
-  transform: scale(1.75);
-  transform-origin: center center;
   object-fit: contain;
 }
 
 .spe-sidebar__label {
   width: 100%;
-  margin: -12px 0 0;
+  margin: -8px 0 0;
   color: #b9c9df;
   font-size: 13px;
   line-height: 1.5;
@@ -226,23 +248,25 @@ html[dir="ltr"] .main-content { text-align: left; }
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .spe-sidebar__link {
-  flex: 0 0 34px;
+  flex: 0 0 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0 10px;
+  padding: 8px 13px;
+  border: 0;
   border-radius: 7px;
   color: #edf5ff;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.3;
-  text-align: center;
+  text-align: right;
   text-decoration: none;
   transition: background-color .18s ease, color .18s ease;
 }
@@ -264,12 +288,12 @@ html[dir="ltr"] .main-content { text-align: left; }
   flex: 0 0 auto;
   width: 100%;
   margin-top: auto;
-  padding: 28px 10px 0;
+  padding: 34px 13px 0;
 }
 
 .spe-sidebar__admin {
   display: grid;
-  gap: 5px;
+  gap: 4px;
   padding-bottom: 16px;
 }
 
@@ -340,20 +364,44 @@ html[dir="ltr"] .spe-sidebar { direction: rtl; }
 html[dir="ltr"] .spe-sidebar__link,
 html[dir="ltr"] .spe-sidebar__label { text-align: center; }
 
-@media (max-width: 760px) {
+.dashboard-layout > .spe-sidebar ~ .main-content {
+  width: calc(100% - 238px);
+  margin-right: 238px;
+}
+
+.dashboard-layout > .spe-sidebar {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: 238px;
+  min-width: 238px;
+  max-width: 238px;
+  height: 100vh;
+  padding: 26px 18px 20px;
+}
+
+@media (max-width: 560px) {
   .spe-sidebar {
     position: static;
     width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex-basis: auto;
     height: auto;
     min-height: 0;
-    padding: 18px 16px;
+    padding: 12px 10px;
   }
 
-  .spe-sidebar__top { padding-bottom: 16px; }
-  .spe-sidebar__brand { min-height: 240px; }
-  .spe-sidebar__logo-wrapper { min-height: 240px; }
-  .spe-sidebar__logo { width: 180px; }
-  .spe-sidebar__nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; overflow: visible; }
-  .spe-sidebar__link { min-height: 38px; }
-  .spe-sidebar__footer { padding: 20px 8px 0; }
+  .spe-sidebar__nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; overflow: visible; }
+  .spe-sidebar__link { min-height: 28px; }
+  .spe-sidebar__footer { padding: 16px 4px 0; }
+  .dashboard-layout > .spe-sidebar ~ .main-content { width: 100%; margin-right: 0; }
+  .dashboard-layout > .spe-sidebar {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex-basis: auto;
+    height: auto;
+    padding: 12px 10px;
+  }
 }

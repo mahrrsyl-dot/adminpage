@@ -16,7 +16,7 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--text);
-  font-family: "Tajawal", Tahoma, Arial, sans-serif;
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
 }
 
 button, input { font: inherit; }
